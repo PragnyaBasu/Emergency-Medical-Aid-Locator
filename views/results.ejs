@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nearby Hospitals</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container result-container">
+    <h1>Nearby Hospitals</h1>
+    <% if (message) { %>
+      <p class="message"><%= message %></p>
+    <% } else { %>
+      <ul>
+        <% hospitals.forEach(({ name, address, rating, location }) => { %>
+          <li>
+            <strong><%= name %></strong><br>
+            <span>Address: <%= address %></span><br>
+            <span>Rating: <%= rating %></span><br>
+            <!-- Button and map icon for navigating to the hospital location -->
+            <button class="map-btn" onclick="window.open('https://www.google.com/maps?q=<%= location.lat %>,<%= location.lng %>', '_blank')">
+              <img src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Map Icon" class="map-icon"> View on Google Maps
+            </button>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+    <a href="/">Search Again</a>
+  </div>
+</body>
+</html>

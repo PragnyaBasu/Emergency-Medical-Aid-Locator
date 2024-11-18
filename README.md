@@ -25,6 +25,10 @@ The **Emergency Medical Aid Locator** is a web application designed to help user
 ## APP UI
 
 #### 1
+![App demo Alt Text](public/images/1.gif)
+
+#### 2
+![App demo Alt Text](public/images/2.gif)
 
 
 ## Installation and Setup 🚀
@@ -70,6 +74,10 @@ http://localhost:3000
 
 4. **Navigate via Google Maps**:  
    Use the **View on Google Maps** button to see the hospital location directly in Google Maps.
+
+## AUTHOR
+
+* PRAGNYA BASU
 
 ---
 
